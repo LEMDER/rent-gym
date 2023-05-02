@@ -3,13 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/my_primary"
+    android:background="@color/white"
     tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/my_primary"
+        android:orientation="vertical" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:text="rent-gym.com"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        />
+
+    <TextView
+        android:id="@+id/filter_text"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+        android:text="Фильтр"
+        android:textColor="@color/black"
+        android:textSize="22dp" />
+
+    <ImageView
+        android:id="@+id/filter_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/filter_icon" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:id="@+id/recyclerview"
+        android:layout_below="@+id/header"
 
         />
 

@@ -12,7 +12,7 @@ import com.example.rentgym.R;
 public class MyViewHolder extends RecyclerView.ViewHolder {
 
     TextView priceView, addressView, cityView, informationView, dateView;
-    ImageView imageView;
+    ImageView imageView, imageFavorite;
 
 
     public MyViewHolder(@NonNull View itemView) {
@@ -22,8 +22,11 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
         addressView = itemView.findViewById(R.id.address);
         cityView = itemView.findViewById(R.id.city);
         imageView = itemView.findViewById(R.id.recycleImage);
+        imageFavorite = itemView.findViewById(R.id.favoriteBtn);
         informationView = itemView.findViewById(R.id.information);
         dateView = itemView.findViewById(R.id.date);
+
+
 
     }
 }

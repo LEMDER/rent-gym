@@ -20,6 +20,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public MyAdapter(Context context, List<Gym> gyms) {
         this.context = context;
         this.gyms = gyms;
+
     }
 
     @NonNull
@@ -34,6 +35,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.addressView.setText(gyms.get(position).getAddress());
         holder.cityView.setText(gyms.get(position).getCity());
         holder.imageView.setImageResource(gyms.get(position).getImage());
+        holder.imageFavorite.setImageResource(gyms.get(position).getFavorite());
         holder.informationView.setText(gyms.get(position).getInformation());
         holder.dateView.setText(gyms.get(position).getDate());
     }

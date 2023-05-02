@@ -1,7 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogdb"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_round_remove"
+        android:layout_gravity="center|top"
+        android:scaleType="centerCrop"/>
+
+    <!-- Section title -->
+    <TextView
+        android:id="@+id/filter_section_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"/>
+
+    <!-- Price range input fields -->
+    <LinearLayout
+        android:id="@+id/price_range_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_section_title"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="2">
+
+        <!-- Price range 'from' input field -->
+        <EditText
+            android:id="@+id/price_range_from"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"
+            android:paddingStart="12dp"
+            android:hint="From"
+            android:background="@drawable/edit_text_background"
+            android:inputType="numberDecimal"
+            android:textColor="@color/gray_text"
+            android:textColorHint="@color/gray_text" />
+
+        <!-- Price range 'to' input field -->
+        <EditText
+            android:id="@+id/price_range_to"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:paddingStart="12dp"
+            android:layout_marginRight="10dp"
+            android:hint="To"
+            android:background="@drawable/edit_text_background"
+
+            android:inputType="numberDecimal"
+            android:textColor="@color/gray_text"
+            android:textColorHint="@color/gray_text" />
+
+    </LinearLayout>
+
+    <!-- Photo checkbox -->
+    <CheckBox
+        android:id="@+id/photo_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/price_range_layout"
+        android:text="Only with photos"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp" />
+
+    <!-- Category dropdown -->
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/photo_checkbox"
+        android:entries="@array/category_list"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="16dp" />
+
+    <!-- Filter apply button -->
+    <Button
+        android:id="@+id/filter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/category_spinner"
+        android:text="Apply"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>

@@ -2,14 +2,16 @@ package com.example.rentgym.entity;
 
 public class Gym {
     String price;
+    int favorite;
     String address;
     String city;
     int image;
     String information;
     String date;
 
-    public Gym(String price, String address, String city, int image, String information, String date) {
+    public Gym(String price, int favorite, String address, String city, int image, String information, String date) {
         this.price = price;
+        this.favorite = favorite;
         this.address = address;
         this.city = city;
         this.image = image;
@@ -64,5 +66,13 @@ public class Gym {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public int getFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(int favorite) {
+        this.favorite = favorite;
     }
 }
